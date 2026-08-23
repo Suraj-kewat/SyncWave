@@ -17,7 +17,7 @@
   --r:10px;--rs:6px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%;overflow:hidden}
+html,body{height:100%;max-height:100%;overflow:hidden}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);display:flex;flex-direction:column}
 
 /* MODAL */
@@ -71,7 +71,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:11px 1
 /* VIDEO */
 .video-wrap{position:relative;background:#000;flex-shrink:0}
 .video-wrap iframe, #ytPlayer{width:100%;display:block;border:0}
-.video-wrap{aspect-ratio:16/9}
+.video-wrap{aspect-ratio:16/9;max-height:30vh;flex-shrink:0}
 .video-mask{position:absolute;inset:0;z-index:5;cursor:pointer}
 
 /* PROGRESS */
@@ -126,7 +126,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:11px;heigh
 .skip-fill{height:100%;background:var(--amber);border-radius:2px;transition:width .3s}
 
 /* QUEUE */
-.qwrap{flex:1;overflow-y:auto;overflow-x:hidden;scroll-behavior:smooth;min-height:0}
+.qwrap{flex:1;overflow-y:auto;overflow-x:hidden;scroll-behavior:smooth;min-height:0;height:0}
 .qwrap::-webkit-scrollbar{width:3px}
 .qwrap::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
 .sec{display:flex;align-items:center;justify-content:space-between;padding:9px 13px 4px;font-size:10px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.9px;position:sticky;top:0;background:var(--bg);z-index:10}
